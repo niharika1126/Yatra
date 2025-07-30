@@ -1,30 +1,23 @@
-import Navbar from "../components/navbar/navbar";
-import Achievements from "../pageComponents/homePage/acheivements";
-import Associations from "../pageComponents/homePage/homeAssociations";
-import Header from "../pageComponents/homePage/header";
-import HomeHeader from "../pageComponents/homePage/homeHeader";
-import Initiatives from "../pageComponents/homePage/homeInitiatives";
-import Publications from "../pageComponents/homePage/publications";
-import ResearchJournalist from "../pageComponents/homePage/researchJournalist";
-import Testimonial from "../pageComponents/homePage/homeTestimonials";
-
-export default function Home() {
+import React from 'react';
+import Hero from '../components/Hero';
+import SoulTour from "../components/SoulTour";
+import TopSpritual from "../components/TopSpritual";
+import PlanTrip from "../components/PlanTrip";
+import RecentGallery from "../components/RecentGallery";
+import Stat from "../components/Stat";
+import ExploreSpirituality from "../components/ExploreSpirituality";
+const Home = () => {
   return (
-    <section className="w-full h-full bg-highlight_background flex flex-col items-center gap-8 overflow-x-hidden scrollbar-hide ">
-      {/* Navbar */}
-      <Navbar />
-
-      {/* Main Content */}
-      <main className="w-full mt-16 flex flex-col items-center gap-24">
-        <Header />
-        <HomeHeader />
-        <Achievements />
-        <Publications />
-        <ResearchJournalist />
-        <Initiatives />
-        <Associations />
-        <Testimonial />
-      </main>
-    </section>
+    <div>
+      <Hero />
+      <SoulTour />
+      <TopSpritual />
+      <PlanTrip />
+      <RecentGallery />
+      <Stat />
+      <ExploreSpirituality />
+    </div>
   );
-}
+};
+
+export default Home;

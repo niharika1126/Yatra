@@ -56,7 +56,7 @@ const Navbar = () => {
       name: "Activities", // ✅ NEW SECTION
       subMenu: [
         { label: "Varanasi Activities", path: "/varnasiactivity" },
-        { label: "Kashi Spiritual Activities", path: "#" },
+        { label: "Kashi Spiritual Activities", path: "/kashiactivity" },
         { label: "Mathura Pilgrimage", path: "#" },
         { label: "Ayodhya Events", path: "#" },
         { label: "Haridwar Rituals", path: "#" },

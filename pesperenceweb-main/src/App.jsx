@@ -3,11 +3,18 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/home";
-import Contact from "./pages/contact";
-import Career from "./pages/career";
 import About from "./pages/about";
-import Individualcareer from "./pages/individualcareer";
-
+import Contact from "./pages/contact";
+import LoginRegister from "./pages/LoginRegister"; // ✅ Corrected import
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Partner from "./pages/Partner";
+import Diwali from "./pages/Diwali";
+import Cart from './pages/Cart';
+import Check from './pages/Check'
+import ReligiousTours from './pages/ReligiousTours';
+import VarnasiActivity from './pages/VarnasiActivity';
+import KashiActivity from './pages/KashiActivity';
 function NotFound() {
   return (
     <h1 className="text-center text-red-600 text-3xl mt-10">
@@ -15,48 +22,27 @@ function NotFound() {
     </h1>
   );
 }
-import Grants from "./pages/grants";
-import Teams from "./pages/teams";
-import SearchResult from "./pages/searchResult";
-import Employee from "./pages/employee";
-import BookJournal from "./pages/bookJournalPage";
-import Associations from "./pages/associations";
-import Initiatives from "./pages/initiatives";
-import IndividualAssociations from "./pages/individualAssociations";
 
 function App() {
   return (
     <Router>
       <div className="w-screen h-screen scrollbar-hide">
+        <Navbar />
         <Routes>
-          {/* Redirect the root (/) to Home */}
           <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/careers" element={<Career />} />
           <Route path="/about" element={<About />} />
-          <Route path="/individualcareer" element={<Individualcareer />} />
-          {/* Fixed Typo */}
-          {/* Contact page route */}
           <Route path="/contact" element={<Contact />} />
-          {/* Grants Page Route */}
-          <Route path="/grants" element={<Grants />} />
-          {/* Common Teams Page Route */}
-          <Route path="/teams" element={<Teams />} />
-          {/* Search Results Page Route */}
-          <Route path="/search" element={<SearchResult />} />
-          {/* Employee Page Route */}
-          <Route path="/employee" element={<Employee />} />
-          {/* Book Journal Page Route */}
-          <Route path="/bookjournal" element={<BookJournal />} />
-          <Route path="/associations" element={<Associations />} />
-          <Route path="/initiatives" element={<Initiatives />} />
-          <Route
-            path="/associations/:id"
-            element={<IndividualAssociations />}
-          />
-          {/* Handle 404 for undefined routes */}
+          <Route path="/loginregister" element={<LoginRegister />} /> {/* ✅ Working route */}
+           <Route path="/partner" element={<Partner />} /> {/* ✅ Working route */}
+          <Route path="/diwali" element={<Diwali />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path ="/checkout" element ={<Check/>} />
+          <Route path ="/religioustours" element ={<ReligiousTours/>} />
+          <Route path="/varnasiactivity" element ={<VarnasiActivity/>}/>
+          <Route path="/kashiactivity" element ={<KashiActivity/>}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
