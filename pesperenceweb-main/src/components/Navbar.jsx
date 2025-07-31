@@ -16,19 +16,15 @@ const Navbar = () => {
       path: "/religioustours",
       subMenu: [
         { label: "Diwali Tour Packages", path: "/diwali" },
-        { label: "Durga Puja Tour Package in Kolkata​", path: "#" },
-        { label: "Navagraha Temple Tour", path: "#" },
-        { label: "Navratri Tour in Gujarat", path: "#" },
-        { label: "Puri Rath Yatra Tour Package", path: "#" },
-        { label: "Rajasthan Spiritual and Cultural Tour", path: "#" },
-        { label: "Varanasi Spiritual Tour Package", path: "#" },
-        { label: "Panj Takht Tour Package", path: "#" },
-        { label: "Varanasi Sarnath Tour Package", path: "#" },
+        { label: "Durga Puja Tour Package in Kolkata​", path: "/durgatour" },
+        { label: "Navagraha Temple Tour", path: "/navgrahatour" },
+        { label: "Navratri Tour in Gujarat", path: "/navratritour" },
         { label: "View More Tours", path: "#" },
       ],
     },
     {
       name: "Religious Circuits",
+      path:"/religiouscircuits",
       subMenu: [
         { label: "Ramayana Tour Package", path: "#" },
         { label: "Mahabharata Circuit Tour Package", path: "#" },
@@ -39,6 +35,7 @@ const Navbar = () => {
     },
     {
       name: "Spiritual Experience",
+  
       subMenu: [
         { label: "Himalayan Retreats", path: "#" },
         { label: "Spiritual Retreats", path: "#" },

@@ -44,9 +44,6 @@ const SoulTour = () => {
               </div>
               <div className="text-center mt-3">
                 <p className="font-semibold text-gray-800 text-base">{category.title}</p>
-                <span className="text-sm text-black font-medium block mt-1">
-                  See More
-                </span>
               </div>
             </div>
           ))}

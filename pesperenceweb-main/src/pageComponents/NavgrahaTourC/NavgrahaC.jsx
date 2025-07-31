@@ -1,40 +1,40 @@
 import React from "react";
-import diwaliImage from "../assets/diwali.jpg"; // Make sure this path is correct
+import navratriImage from "../../assets/navratri.jpg"; // ✅ Make sure this image exists at the specified path
 
-const DiwaliC = () => {
+const NavratriC = () => {
   return (
     <div className="flex flex-col lg:flex-row px-6 py-12 gap-8 bg-white">
       {/* LEFT SIDE - 70% */}
       <div className="lg:w-[70%] space-y-6 pr-6">
         {/* Image */}
         <img
-          src={diwaliImage}
-          alt="Diwali Celebration"
+          src={navratriImage}
+          alt="Navratri Tour"
           className="w-full h-auto rounded-xl shadow-md"
         />
 
         {/* Heading 1 */}
         <h2 className="text-3xl font-bold text-red-600">
-          Diwali Tour: A Divine Celebration of Lights
+          Navratri Tour in Gujarat: Celebrate Divine Femininity
         </h2>
         <p className="text-gray-700 text-base leading-relaxed">
-          Experience the best that India has to offer with the festival of lights – Diwali Tour, in the spiritual heart of India with Yatra Veda. Witness the grandeur of Ganga Aarti, partake in sacred Lakshmi Puja, and explore the illuminated ghats of Varanasi. This 4-day curated spiritual tour blends tradition, devotion, and celebration, ensuring an unforgettable Diwali experience filled with divine blessings and cultural richness.
+          Experience the vibrant and spiritually charged festival of Navratri in the heart of Gujarat. Dance to the rhythm of Garba, explore elaborately decorated temples, and immerse in the divine celebration of the nine goddesses.
         </p>
 
         {/* Heading 2 */}
         <h2 className="text-3xl font-bold text-red-600">
-          Comfort and Convenience at the Diwali Festival Trip
+          A Spiritual and Cultural Extravaganza
         </h2>
         <p className="text-gray-700 text-base leading-relaxed">
-          At Yatra Veda, we prioritize your comfort, convenience, and spiritual fulfilment. Our handpicked hotels, seamless transportation options (flight, train, cab), and local expert guides ensure a hassle-free travel experience. We guarantee 100% satisfaction, ensuring you return with cherished spiritual memories.
+          This tour offers a unique blend of devotion and festivity. Attend traditional Aartis, join community dances, and witness the energy that lights up every town and village during these nine sacred nights.
         </p>
 
         {/* Heading 3 */}
         <h2 className="text-3xl font-bold text-red-600">
-          Why Choose Yatra Veda for the Diwali Holiday Tour
+          Why Choose Our Navratri Tour?
         </h2>
         <p className="text-gray-700 text-base leading-relaxed">
-          Expertly curated spiritual tours tailored for deep religious experiences. Comfortable stays at well-rated accommodations. Local insights from knowledgeable guides to enhance your journey. Hassle-free transportation options. A trusted brand dedicated to providing exceptional religious travel experiences. Range of spiritual, religious and wellness travel experiences for those looking for something different.
+          Enjoy a curated experience with guided cultural immersion, safe travel, festive meals, and access to popular Garba venues. Perfect for those seeking celebration with a spiritual essence.
         </p>
       </div>
 
@@ -42,10 +42,10 @@ const DiwaliC = () => {
       <div className="lg:w-[30%] space-y-6 border border-gray-200 rounded-xl p-6 shadow-sm bg-white text-[15px]">
         {/* Package Overview */}
         <div className="space-y-3">
-          <h2 className="text-xl font-bold text-red-600">Diwali Tour Packages</h2>
-          <p className="text-gray-900 font-semibold text-lg">₹25,588.00 – ₹69,345.00</p>
+          <h2 className="text-xl font-bold text-red-600">Navratri Tour in Gujarat</h2>
+          <p className="text-gray-900 font-semibold text-lg">₹9,999.00 – ₹19,999.00</p>
           <p className="text-gray-700 leading-relaxed">
-            Experience the magic of Diwali in Varanasi, where the holy city transforms into a radiant spectacle of lights and devotion. Witness the breathtaking Ganga Aarti at Dashashwamedh Ghat, the ghats illuminated with thousands of diyas, and a sky lit up with fireworks. Take part in traditional Lakshmi Puja, cultural performances, and festive feasts. With guided tours, comfortable stays, and seamless travel, immerse yourself in this unforgettable celebration of light and spirituality. Book your Diwali experience today!
+            Join the divine celebration of Navratri in Gujarat. Includes accommodation, Garba passes, guided visits to temples, festive meals, and cultural workshops. A perfect journey for those who seek both joy and devotion.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ const DiwaliC = () => {
         <div className="space-y-2">
           <label className="block font-semibold text-base">Package Type</label>
           <div className="flex gap-2 flex-wrap">
-            {["Luxury", "Premium", "Standard"].map((type) => (
+            {"Festival", "Cultural", "Spiritual".split(", ").map((type) => (
               <button
                 key={type}
                 className="border border-red-500 text-red-600 px-4 py-2 rounded-full hover:bg-red-50 text-sm font-medium"
@@ -68,7 +68,7 @@ const DiwaliC = () => {
         <div className="space-y-2">
           <label className="block font-semibold text-base">Travel Type</label>
           <div className="flex gap-2 flex-wrap">
-            {["Couple", "Family", "Solo"].map((type) => (
+            {"Solo", "Couple", "Group".split(", ").map((type) => (
               <button
                 key={type}
                 className="border border-red-500 text-red-600 px-4 py-2 rounded-full hover:bg-red-50 text-sm font-medium"
@@ -114,14 +114,15 @@ const DiwaliC = () => {
 
         {/* CTA */}
          <button
-      onClick={() => navigate("/cart")}
-      className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg text-base font-semibold"
-    >
-      Add to Cart
-    </button>
+            onClick={() => navigate("/cart")}
+            className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg text-base font-semibold"
+          >
+            Add to Cart
+          </button>
       </div>
     </div>
   );
 };
 
-export default DiwaliC;
+export default NavratriC;
+

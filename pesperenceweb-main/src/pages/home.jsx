@@ -6,6 +6,7 @@ import PlanTrip from "../components/PlanTrip";
 import RecentGallery from "../components/RecentGallery";
 import Stat from "../components/Stat";
 import ExploreSpirituality from "../components/ExploreSpirituality";
+import Subscription from "../components/Subscription";
 const Home = () => {
   return (
     <div>
@@ -16,6 +17,7 @@ const Home = () => {
       <RecentGallery />
       <Stat />
       <ExploreSpirituality />
+      <Subscription />
     </div>
   );
 };

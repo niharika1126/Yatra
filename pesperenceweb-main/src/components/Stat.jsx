@@ -13,12 +13,14 @@ const Stats = () => {
       {statsData.map((stat, index) => (
         <div
           key={index}
-          className="relative w-52 h-52 flex flex-col items-center justify-center rounded-full border-4 border-black text-center"
+          className={`relative w-60 h-60 flex flex-col items-center justify-center rounded-full border-4 border-black text-center transition-transform duration-500 ${
+            index % 2 === 0 ? "-translate-y-4" : "translate-y-4"
+          }`}
         >
           {/* Inner Circle */}
-          <div className="w-40 h-40 bg-gray-100 rounded-full flex flex-col items-center justify-center">
-            <h2 className="text-3xl font-bold">{stat.number}</h2>
-            <p className="text-sm">{stat.label}</p>
+          <div className="w-48 h-48 bg-gray-100 rounded-full flex flex-col items-center justify-center">
+            <h2 className="text-4xl font-bold">{stat.number}</h2>
+            <p className="text-base">{stat.label}</p>
           </div>
 
           {/* Rotating small dot */}

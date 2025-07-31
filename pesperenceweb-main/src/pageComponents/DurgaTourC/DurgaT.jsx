@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaHotel, FaMapMarkerAlt, FaUtensils, FaCar, FaUserTie } from "react-icons/fa";
 
-const KashiT = () => {
+const DurgaT = () => {
   const [activeTab, setActiveTab] = useState("Overview");
 
   const tabContent = {
@@ -204,4 +204,4 @@ const KashiT = () => {
   );
 };
 
-export default KashiT;
+export default DurgaT;

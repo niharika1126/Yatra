@@ -3,16 +3,16 @@ import kashi from "../assets/kashi.jpg";
 
 const Hero = () => {
   return (
-    <div className="relative w-full min-h-[400px] md:min-h-[650px] overflow-hidden group">
+    <div className="relative w-full h-[100vh] md:min-h-[650px] overflow-hidden group">
       {/* Background Image */}
       <img
         src={kashi}
         alt="Kashi Ghat"
-        className="w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
       />
 
       {/* Hover Text & Button */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start px-4 md:px-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-start px-4 md:px-8 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-700">
         <p className="text-xs md:text-sm text-gray-300 mb-1 md:mb-2">
           OUR BEST EXPERIENCE
         </p>

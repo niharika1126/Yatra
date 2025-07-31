@@ -47,8 +47,8 @@ const Footer = () => {
         <div>
           <h3 className="text-red-700 font-bold text-lg mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link to="/diwali">› Religious Tours</Link></li>
-            <li><Link to="#">› Religious Circuits</Link></li>
+            <li><Link to="/religioustours">› Religious Tours</Link></li>
+            <li><Link to="/religiouscircuits">› Religious Circuits</Link></li>
             <li><Link to="#">› Spiritual Experience</Link></li>
             <li><Link to="#">› Festival Experience</Link></li>
           </ul>

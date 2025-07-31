@@ -1,7 +1,10 @@
 import React from "react";
-import kashiImage from "../../assets/kashi.jpg"; // Make sure this path is correct
+import { useNavigate } from "react-router-dom";
+import kashiImage from "../../assets/kashi.jpg";
 
 const KashiC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col lg:flex-row px-6 py-12 gap-8 bg-white">
       {/* LEFT SIDE - 70% */}
@@ -18,7 +21,11 @@ const KashiC = () => {
           Kashi Tour: A Day in the City of Light
         </h2>
         <p className="text-gray-700 text-base leading-relaxed">
-          Discover the spiritual soul of India with our Kashi Day Tour. Wander through the ancient alleys, witness the sacred rituals by the Ganges, and immerse yourself in the aura of temples that echo with centuries of devotion. This one-day journey captures the very essence of Varanasi’s sacred rhythm.
+          Discover the spiritual soul of India with our Kashi Day Tour. Wander
+          through the ancient alleys, witness the sacred rituals by the Ganges,
+          and immerse yourself in the aura of temples that echo with centuries
+          of devotion. This one-day journey captures the very essence of
+          Varanasi’s sacred rhythm.
         </p>
 
         {/* Heading 2 */}
@@ -26,7 +33,11 @@ const KashiC = () => {
           Seamless Experience with Yatra Veda
         </h2>
         <p className="text-gray-700 text-base leading-relaxed">
-          With Yatra Veda, your comfort is our priority. Our guided Kashi Day Experience includes smooth local transport, friendly guides, and planned visits to key sites like Kashi Vishwanath Temple, Assi Ghat, and Sarnath. Enjoy a peaceful and enriching journey without any hassle.
+          With Yatra Veda, your comfort is our priority. Our guided Kashi Day
+          Experience includes smooth local transport, friendly guides, and
+          planned visits to key sites like Kashi Vishwanath Temple, Assi Ghat,
+          and Sarnath. Enjoy a peaceful and enriching journey without any
+          hassle.
         </p>
 
         {/* Heading 3 */}
@@ -34,7 +45,10 @@ const KashiC = () => {
           Why Book the Kashi Tour with Us?
         </h2>
         <p className="text-gray-700 text-base leading-relaxed">
-          Expert-led spiritual experiences curated for seekers of peace and purpose. Local cultural insights, flexible group sizes, and verified on-ground partners ensure a journey worth remembering. Explore ancient heritage with trusted guidance.
+          Expert-led spiritual experiences curated for seekers of peace and
+          purpose. Local cultural insights, flexible group sizes, and verified
+          on-ground partners ensure a journey worth remembering. Explore
+          ancient heritage with trusted guidance.
         </p>
       </div>
 
@@ -43,9 +57,15 @@ const KashiC = () => {
         {/* Package Overview */}
         <div className="space-y-3">
           <h2 className="text-xl font-bold text-red-600">Kashi Day Tour</h2>
-          <p className="text-gray-900 font-semibold text-lg">₹3,999.00 – ₹7,499.00</p>
+          <p className="text-gray-900 font-semibold text-lg">
+            ₹3,999.00 – ₹7,499.00
+          </p>
           <p className="text-gray-700 leading-relaxed">
-            Dive into the ancient city of Kashi with a full-day guided tour. From the sacred Ganga Aarti at Dashashwamedh Ghat to a spiritual visit at Kashi Vishwanath, this experience is perfect for those seeking a day of divine immersion. Comfortable transport, lunch, and expert guidance included.
+            Dive into the ancient city of Kashi with a full-day guided tour.
+            From the sacred Ganga Aarti at Dashashwamedh Ghat to a spiritual
+            visit at Kashi Vishwanath, this experience is perfect for those
+            seeking a day of divine immersion. Comfortable transport, lunch, and
+            expert guidance included.
           </p>
         </div>
 
@@ -81,7 +101,9 @@ const KashiC = () => {
 
         {/* Booking Date */}
         <div className="space-y-1">
-          <label className="block font-semibold text-base">Select a booking date:</label>
+          <label className="block font-semibold text-base">
+            Select a booking date:
+          </label>
           <input
             type="date"
             className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm"
@@ -90,7 +112,9 @@ const KashiC = () => {
 
         {/* Number of Packages */}
         <div className="space-y-1">
-          <label className="block font-semibold text-base">Number of Packages</label>
+          <label className="block font-semibold text-base">
+            Number of Packages
+          </label>
           <input
             type="number"
             min="1"
@@ -112,10 +136,22 @@ const KashiC = () => {
           </div>
         </div>
 
-        {/* CTA */}
-        <button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg text-base font-semibold">
-          Add to Cart
-        </button>
+        {/* CTA Buttons */}
+        <div className="space-y-3">
+          <button
+            onClick={() => navigate("/cart")}
+            className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg text-base font-semibold"
+          >
+            Add to Cart
+          </button>
+
+          <button
+            onClick={() => navigate("/checkout")}
+            className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg text-base font-semibold"
+          >
+            Proceed to Checkout
+          </button>
+        </div>
       </div>
     </div>
   );

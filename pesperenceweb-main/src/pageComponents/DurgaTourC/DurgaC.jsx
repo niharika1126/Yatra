@@ -1,40 +1,45 @@
 import React from "react";
-import diwaliImage from "../assets/diwali.jpg"; // Make sure this path is correct
+import { useNavigate } from "react-router-dom"; // Import navigate
+import durgaImage from "../../assets/durga.jpg"; // Ensure the image exists in assets
 
-const DiwaliC = () => {
+const DurgaC = () => {
+  const navigate = useNavigate(); // Hook to navigate to /cart
+
+  const handleAddToCart = () => {
+    navigate("/cart");
+  };
+
   return (
     <div className="flex flex-col lg:flex-row px-6 py-12 gap-8 bg-white">
       {/* LEFT SIDE - 70% */}
       <div className="lg:w-[70%] space-y-6 pr-6">
         {/* Image */}
         <img
-          src={diwaliImage}
-          alt="Diwali Celebration"
+          src={durgaImage}
+          alt="Durga Puja Tour"
           className="w-full h-auto rounded-xl shadow-md"
         />
 
         {/* Heading 1 */}
         <h2 className="text-3xl font-bold text-red-600">
-          Diwali Tour: A Divine Celebration of Lights
+          Durga Puja Tour: Experience the Unforgettable in Kolkata
         </h2>
         <p className="text-gray-700 text-base leading-relaxed">
-          Experience the best that India has to offer with the festival of lights – Diwali Tour, in the spiritual heart of India with Yatra Veda. Witness the grandeur of Ganga Aarti, partake in sacred Lakshmi Puja, and explore the illuminated ghats of Varanasi. This 4-day curated spiritual tour blends tradition, devotion, and celebration, ensuring an unforgettable Diwali experience filled with divine blessings and cultural richness.
+          When you take the Durga Puja tour to Kolkata, you're not just going to see one of India’s largest festivals. Durga Puja is a spectacle of devotion, artistry, and cultural vibrancy. Celebrated with unparalleled grandeur, this festival transforms the city into a colourful paradise of magnificent pandals, rhythmic beats of dhak, and mesmerizing cultural performances. The atmosphere is electrifying, as millions of devotees and visitors come together to witness the divine presence of Goddess Durga in her most splendid forms.
         </p>
 
         {/* Heading 2 */}
         <h2 className="text-3xl font-bold text-red-600">
-          Comfort and Convenience at the Diwali Festival Trip
+          Comfort, Convenience and Experience with this Durga Puja Trip
         </h2>
         <p className="text-gray-700 text-base leading-relaxed">
-          At Yatra Veda, we prioritize your comfort, convenience, and spiritual fulfilment. Our handpicked hotels, seamless transportation options (flight, train, cab), and local expert guides ensure a hassle-free travel experience. We guarantee 100% satisfaction, ensuring you return with cherished spiritual memories.
+          At Yatra Veda, we ensure your spiritual journey is seamless and memorable. Our tour offers comfortable accommodations at centrally located hotels. Hassle-free transport arrangements by flights, trains, and private vehicles. Guided pandal visits with expert insights into the rituals and traditions. Delicious vegetarian and non-vegetarian meal options to experience authentic Bengali flavours. The 24/7 assistance and a 100% satisfaction guarantee.
         </p>
 
         {/* Heading 3 */}
-        <h2 className="text-3xl font-bold text-red-600">
-          Why Choose Yatra Veda for the Diwali Holiday Tour
-        </h2>
+        <h2 className="text-3xl font-bold text-red-600">Why Choose Yatra Veda</h2>
         <p className="text-gray-700 text-base leading-relaxed">
-          Expertly curated spiritual tours tailored for deep religious experiences. Comfortable stays at well-rated accommodations. Local insights from knowledgeable guides to enhance your journey. Hassle-free transportation options. A trusted brand dedicated to providing exceptional religious travel experiences. Range of spiritual, religious and wellness travel experiences for those looking for something different.
+          Expertly curated religious and cultural tours with deep spiritual significance. Personalised experiences ensure a blend of devotion, history, and leisure. Local guides with in-depth knowledge of Kolkata’s culture and heritage. Unparalleled comfort and seamless travel logistics for a stress-free experience.
         </p>
       </div>
 
@@ -42,10 +47,10 @@ const DiwaliC = () => {
       <div className="lg:w-[30%] space-y-6 border border-gray-200 rounded-xl p-6 shadow-sm bg-white text-[15px]">
         {/* Package Overview */}
         <div className="space-y-3">
-          <h2 className="text-xl font-bold text-red-600">Diwali Tour Packages</h2>
-          <p className="text-gray-900 font-semibold text-lg">₹25,588.00 – ₹69,345.00</p>
+          <h2 className="text-xl font-bold text-red-600">Durga Puja Tour Package in Kolkata</h2>
+          <p className="text-gray-900 font-semibold text-lg">₹32,085.00 – ₹87,975.00</p>
           <p className="text-gray-700 leading-relaxed">
-            Experience the magic of Diwali in Varanasi, where the holy city transforms into a radiant spectacle of lights and devotion. Witness the breathtaking Ganga Aarti at Dashashwamedh Ghat, the ghats illuminated with thousands of diyas, and a sky lit up with fireworks. Take part in traditional Lakshmi Puja, cultural performances, and festive feasts. With guided tours, comfortable stays, and seamless travel, immerse yourself in this unforgettable celebration of light and spirituality. Book your Diwali experience today!
+            Celebrate the Durga Puja Extravaganza in Kolkata, India’s grandest festival of devotion and culture. Witness stunning thematic pandals, intricate idols, and mesmerizing rituals as the city comes alive with vibrant celebrations. Explore heritage puja pandals, enjoy traditional Dhak beats, sindoor khela, and cultural performances, and indulge in authentic Bengali delicacies. With expert-guided tours, seamless travel, and premium accommodations, immerse yourself in the spirit of Durga Puja like never before. Book your unforgettable festive journey today!
           </p>
         </div>
 
@@ -53,7 +58,7 @@ const DiwaliC = () => {
         <div className="space-y-2">
           <label className="block font-semibold text-base">Package Type</label>
           <div className="flex gap-2 flex-wrap">
-            {["Luxury", "Premium", "Standard"].map((type) => (
+            {["Festival", "Cultural", "Spiritual"].map((type) => (
               <button
                 key={type}
                 className="border border-red-500 text-red-600 px-4 py-2 rounded-full hover:bg-red-50 text-sm font-medium"
@@ -68,7 +73,7 @@ const DiwaliC = () => {
         <div className="space-y-2">
           <label className="block font-semibold text-base">Travel Type</label>
           <div className="flex gap-2 flex-wrap">
-            {["Couple", "Family", "Solo"].map((type) => (
+            {["Solo", "Couple", "Group"].map((type) => (
               <button
                 key={type}
                 className="border border-red-500 text-red-600 px-4 py-2 rounded-full hover:bg-red-50 text-sm font-medium"
@@ -104,7 +109,7 @@ const DiwaliC = () => {
           <label className="block font-semibold text-base">Payment Options</label>
           <div className="text-sm space-y-2">
             <label className="flex items-center gap-2">
-              <input type="radio" name="payment" /> Pay deposit ₹1,000.00
+              <input type="radio" name="payment" /> Pay deposit ₹500.00
             </label>
             <label className="flex items-center gap-2">
               <input type="radio" name="payment" /> Pay full amount
@@ -112,16 +117,16 @@ const DiwaliC = () => {
           </div>
         </div>
 
-        {/* CTA */}
-         <button
-      onClick={() => navigate("/cart")}
-      className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg text-base font-semibold"
-    >
-      Add to Cart
-    </button>
+        {/* Add to Cart Button with Route */}
+        <button
+          onClick={handleAddToCart}
+          className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg text-base font-semibold"
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   );
 };
 
-export default DiwaliC;
+export default DurgaC;

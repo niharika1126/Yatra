@@ -1,34 +1,31 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-// Image imports (Repeat pattern)
-import Img1 from "../assets/bestselling3K.jpg";
-import Img2 from "../assets/bestselling5R.jpg";
-import Img3 from "../assets/SP1.jpg";
-import Img4 from "../assets/SP2.jpg";
-import Img5 from "../assets/spriex3.jpg";
-import Img6 from "../assets/spriex4.jpg";
-
-// Titles for various spiritual tours
-const tourTitles = [
-  "Diwali Tour Package",
-  "Navgraha Temple Tour",
-  "Navratri Tour in Gujarat",
-  "Rajasthan Spiritual & Cultural Tour",
-  "Kashi Pilgrimage Experience",
-  "Maha Shivratri Special Darshan",
-  "Char Dham Express Tour",
-  "Ayodhya Ram Janmbhoomi Visit",
-  "Amritsar Golden Temple Tour",
-  "South Indian Temple Circuit",
+// Reuse the same images or replace with cultural-specific ones
+import Img1 from "../../assets/bestselling3K.jpg";
+import Img2 from "../../assets/bestselling5R.jpg";
+import Img3 from "../../assets/SP1.jpg";
+import Img4 from "../../assets/SP2.jpg";
+import Img5 from "../../assets/spriex3.jpg";
+import Img6 from "../../assets/spriex4.jpg";
+const culturalTitles = [
+  "Rajasthan Culture and Forts Tour",
+  "Navratri Festival Celebration",
+  "Spiritual Dance & Art Tour",
+  "Ayodhya Cultural Yatra",
+  "Heritage Walks in Varanasi",
+  "Temple Festivals of Tamil Nadu",
+  "Folk Music & Devotion Journey",
+  "Ujjain Kumbh Mela Expedition",
+  "North India Cultural Trail",
+  "Incredible India Cultural Immersion",
 ];
 
 const tourImages = [Img1, Img2, Img3, Img4, Img5, Img6];
 
-// Create 34 dummy tours
 const allTours = Array.from({ length: 34 }, (_, i) => ({
   id: i + 1,
-  name: tourTitles[i % tourTitles.length],
+  name: culturalTitles[i % culturalTitles.length],
   image: tourImages[i % tourImages.length],
   popularity: Math.floor(Math.random() * 100),
   rating: (Math.random() * 5).toFixed(1),
@@ -36,7 +33,7 @@ const allTours = Array.from({ length: 34 }, (_, i) => ({
   latest: Date.now() - i * 500000,
 }));
 
-const ReligiousT = () => {
+const ReligiousC = () => {
   const [sortOption, setSortOption] = useState("popularity");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
@@ -64,7 +61,7 @@ const ReligiousT = () => {
         viewport={{ once: true }}
         className="text-center text-4xl sm:text-5xl font-bold text-red-800 mb-6"
       >
-        ❖ Religious Tours ❖
+        ❖ Cultural Tours ❖
       </motion.h2>
 
       <motion.p
@@ -74,7 +71,7 @@ const ReligiousT = () => {
         viewport={{ once: true }}
         className="text-center text-xl text-gray-600 italic max-w-2xl mx-auto mb-10"
       >
-        “Discover sacred destinations that echo eternal devotion.”
+        “Experience India’s vibrant heritage and spiritual soul.”
       </motion.p>
 
       {/* Sort Dropdown */}
@@ -147,4 +144,4 @@ const ReligiousT = () => {
   );
 };
 
-export default ReligiousT;
+export default ReligiousC;

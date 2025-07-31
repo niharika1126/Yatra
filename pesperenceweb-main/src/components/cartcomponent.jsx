@@ -105,10 +105,13 @@ const Cart = () => {
         </div>
 
         {/* Checkout Button */}
-        <button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg text-base font-semibold mt-4">
+        <button 
+           onClick={() => navigate("/checkout")}
+         className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg text-base font-semibold mt-4">
           Proceed to Checkout
         </button>
-
+        
+        
         {/* Enhanced Notes Section */}
         <div className="mt-6 text-gray-900 text-lg leading-relaxed space-y-4 font-semibold">
           <p className="flex items-center gap-2">
